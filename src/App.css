@@ -1,0 +1,196 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  } 
+} */
+
+body {
+  font-family: 'IBM Plex Sans Condensed';
+  margin-top: 0px;
+  background-color: #00c046;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #00c047;
+  height: 80px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-collapse {
+  background-color: #00c047;
+}
+div.row.card {
+  width: 50vw;
+}
+
+.card {
+  opacity: 1;
+  width: 80vw;
+  padding: 10px;
+  border-color: #00c047;
+}
+.navbar-brand {
+  font-weight: bolder;
+  color: white;
+}
+.redColor {
+  color: red;
+}
+.fs-10 {
+  font-size: xx-small;
+}
+.border-green {
+  border-color: #00c047;
+  width: 60vw;
+}
+.table-group-divider {
+  border-color: #00c047;
+}
+.search-width {
+  width: fit-content;
+}
+.table-color {
+  background-color: #eff2f0;
+}
+
+.btn {
+  padding: 0px;
+  width: fit-content;
+}
+
+span.card {
+  width: 30vw;
+}
+
+.heading {
+  padding-bottom: 10px;
+}
+
+.t-color {
+  color: #000;
+  font-weight: bolder;
+}
+
+.container-fluid > label {
+  opacity: 0.3;
+}
+
+a.btn {
+  margin: 5px;
+}
+
+.h4,
+h4 {
+  font-size: 18px;
+}
+.bgcolor {
+  background-color: red;
+}
+.greenbgcolor {
+  background-color: #00c047;
+}
+/* @media (max-width: 500px) {
+  .card {
+    width: 43.5vw;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 999px) {
+  .card {
+    width: 43.5vw;
+    height: 15vh;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .card  {
+    width:21.5vw;
+    height: 15vh;
+  }
+  body{
+    padding-top: 12vh;
+  }
+}
+@media (min-width: 1451px) and (max-width: 2600px) {
+  .card {
+    width:20vw;
+    height: 15vh;
+  }
+  body{
+    padding-top: 15vh;
+  }
+  .imgposition{
+    width: 30vh;
+    height: 15vw;
+  }
+  div.row{
+    padding-top: 20vh;
+  }
+  
+}  */
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.logo {
+  width: 330px;
+  height: 230px;
+  margin: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+.block {
+  width: 25%;
+}
+.astext {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: blue;
+}
+.form-control {
+  background-color: #eff2f0;
+}
+
+.btn-success {
+  background-color: #00c047;
+  color: white;
+  border-radius: 30px;
+  width: 200px;
+}
+.bg-secondary {
+  background-color: #00c047;
+}
