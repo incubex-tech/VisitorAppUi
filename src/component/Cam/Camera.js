@@ -1,12 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 function Camera() {
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
-    const [error, setError] = useState(null);
+    const [errorMsg, setErrorMsg] = useState(null);
     const [photo, setPhoto] = useState(null);
-
-
 
     const startCamera = async () => {
         try {
@@ -14,7 +12,8 @@ function Camera() {
             videoRef.current.srcObject = stream;
             videoRef.current.play();
         } catch (err) {
-            setError(err);
+            setErrorMsg
+                (err);
         }
     };
 
@@ -30,16 +29,24 @@ function Camera() {
         setPhoto(dataUrl);
     };
 
+    useEffect(() => {
+        let ignore = false;
+
+        if (!ignore) startCamera()
+        return () => { ignore = true; }
+    }, []);
+
     return (
         <div>
-            <button onClick={startCamera}>Start Camera</button>
             <button onClick={takePhoto}>Take Photo</button>
-            {error && <p>{error.message}</p>}
-            {photo && <img src={photo} alt='img' />}
+            {errorMsg && <p>{errorMsg.message}</p>}
+            {/* {photo && <img src={photo} alt='img' />} */}
             <video ref={videoRef} style={{ display: 'none' }} autoPlay={true}
                 playsInline={true}
             ></video>
-            <canvas ref={canvasRef} style={{ display: 'block' }}></canvas>
+            <div className='p-2' >
+                <canvas ref={canvasRef} style={{ display: 'block', width: '180px', height: '170px' }}></canvas>
+            </div>
         </div>
     );
 }
@@ -56,8 +63,8 @@ export default Camera;
 //                 videoRef.current.srcObject = stream;
 //                 videoRef.current.play();
 //             })
-//             .catch(error => {
-//                 console.log(error);
+//             .catch(errorMsg => {
+//                 console.log(errorMsg);
 //             });
 //     }
 

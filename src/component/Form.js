@@ -11,14 +11,7 @@ function LoginForm() {
   const [error, setError] = useState(null)
 
   let navigate = useNavigate()
-  // const routeChange = () => {
-  //   let path = `home`
-  //   if (username === 'hr@incubex.in' && password === 'test123') {
-  //     navigate(path)
-  //   } else {
-  //     setError('Invalid username or password')
-  //   }
-  // }
+
 
   const routeChange = async () => {
     try {
@@ -26,7 +19,7 @@ function LoginForm() {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'http://192.168.10.211:3000',
+          'Access-Control-Allow-Origin': 'http://13.231.225.160',
         },
         body: JSON.stringify({
           username: username,
