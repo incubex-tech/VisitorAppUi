@@ -7,8 +7,8 @@ import LoginForm from './component/sms'
 function App() {
   return (
     <BrowserRouter>
-      {/* <AppRouter /> */}
-      <CheckIn />
+      <AppRouter />
+      {/* <CheckIn /> */}
       {/* <LoginForm /> */}
     </BrowserRouter>
   )

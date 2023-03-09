@@ -15,11 +15,12 @@ function LoginForm() {
 
   const routeChange = async () => {
     try {
-      let res = await fetch('http://127.0.0.1:8081/api/auth/signin', {
+      console.log()
+      let res = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/auth/signin`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'http://13.231.225.160',
+          // 'Access-Control-Allow-Origin': 'http://13.231.225.160',
         },
         body: JSON.stringify({
           username: username,
